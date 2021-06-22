@@ -24,6 +24,7 @@
     color: #bdbdbd;
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: 200;
+    text-decoration: none;
 }
 .NavBar_menu_text:hover{
     color: #ffffff;
