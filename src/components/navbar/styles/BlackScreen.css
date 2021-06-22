@@ -1,0 +1,310 @@
+.BlackScreen{
+    position: absolute;
+    z-index: 4;
+    background: #252128;
+    max-width:100vw;
+    min-width: 100vw;
+    margin:0;
+    padding: 0;
+    height:100vh;
+    top:0;
+    display: none;
+    padding-top:100px;;
+}
+.BlackScreenActive{
+    display:flex;
+    justify-content:center;
+    align-items: flex-start;
+}
+.BlackScreen_escape{
+    border: none;
+    color:white;
+    outline: none;
+    background: none;
+    font-size: 24px;
+    position: absolute;
+    top:40px;
+    right:40px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.SignUp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:320px;
+}
+.SignUp_Header{
+    font-family: 'Roboto Condensed', sans-serif;
+    color:white;
+    font-size: 48px;
+    margin-bottom: 24px;
+}
+.SignUp_Header_below{
+    display: flex;
+    margin-bottom: 35px;
+
+}
+.SignUp_Header_below_text,
+.SignUp_Header_below_btn{
+    color:white;
+    font-size: 18px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 300;
+}
+.SignUp_Header_below_btn{
+    color:#FE6148;
+    border: none;
+    outline: none;
+    background: none;
+    padding-left:5px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+.Facebook_btn,
+.Google_button,
+.Google_btn{
+    cursor: pointer;
+    width:100%;
+    height:40px;
+    background: #3B5998;
+    color:white;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    text-align: center;
+    position: relative;
+    font-family:  Helvetica, sans-serif;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.Facebook_btn_span{
+    font-size: 20px;
+    position: absolute;
+    left:20px;
+    top:10px;
+}
+.Facebook_btn:hover{
+    background: #2f487e;
+}
+
+.Google_button{
+    background: #4285F4;
+    margin: 0;
+}
+.Google_button:hover{
+    background: #3875d6;
+}
+.Google_btn_logo{
+    width:20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    position: absolute;
+    top:8px;
+    left:20px;
+    z-index: 5;
+}
+.Google_btn_logo_img{
+    width:15px;
+    height:15px; 
+}
+.SignUp_line{
+    width:100%;
+    margin:20px
+}
+.SignUp_or{
+    transform: translateY(-42px);
+    background: #252128;
+    padding: 10px;
+    color:rgb(212, 212, 212);
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+.SignUp_withEmail_toggle{
+    width:100%;
+    height:40px;
+    background: transparent;
+    color:white;
+    font-size: 14px;
+    border: 1px solid rgb(212, 212, 212);
+    outline: none;
+    text-align: center;
+    transform: translateY(-32px);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.SignUp_withEmail_toggle:hover{
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+
+
+
+
+
+.SignUp_Form,
+.SignUp_Form_form{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.SignUp_Form_form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.SignUp_Form_form_email_label,
+.SignUp_Form_form_password_label{
+    font-size: 20px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #E8E8E8;
+
+}
+.SignUp_Form_form_email{
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom:1px solid  #E8E8E8; 
+    width:100%;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color:white;
+    padding:2px;
+}
+.SignUp_Form_form_email:focus{
+    border-bottom:1px solid  #FE6148; 
+}
+.SignUp_Form_form_password_label{
+    margin-top:5px;
+}
+
+.SignUp_Form_error_email,
+.SignUp_Form_error_password{
+    color:#FF3D3D;
+    padding-top:4px;
+    font-size: 12px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    opacity: 0;
+}
+.SignUp_Form_Submit{
+    background:#FE6148 ;
+    border:1px solid  #FE6148;
+    color:white;
+    text-align: center;
+    width:100%;
+    height:40px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+    cursor: pointer;
+    margin-top:5px;
+    
+}
+.SignUp_Form_Submit:hover{
+    color:rgb(68, 48, 36);
+}
+.SignUp_Form_forget{
+    background: transparent;
+    color:white;
+    text-decoration: underline;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    padding:13px 0 18px;
+    font-size: 14px;
+}
+.error_visible{
+    opacity: 1;
+}
+
+.form_or{
+    background: #252128;
+    padding: 10px;
+    color:rgb(212, 212, 212);
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 30px;
+    transform: translateX(115px);
+   
+}
+.form_or_line{
+    width:100%;
+    display: flex;
+    transform: translateY(50px);
+}
+.Facebook ,
+.Google{
+    width:30px;
+    height:30px;
+    border-radius: 3px;
+    margin:10px 17px;
+    cursor: pointer;
+}
+.Facebook{
+    margin-left: 115px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.SignUp_hidden{
+    display: none;
+}
+.CreatePassWord_Header{
+    position: absolute;
+    transform: translateX(-27px) translateY(80px);
+    font-family: 'Oswald', sans-serif;
+    color:white;
+    font-size: 48px;
+    margin:0;
+    margin-bottom: 24px;
+    white-space: nowrap;
+    
+}
+.CreatePassWord_header-below{
+    margin-top: 150px;
+    color:white;
+    font-size: 18px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+@media screen and (max-width:550px){
+    .CreatePassWord_Header{
+        font-size: 40px;
+        transform: translateX(5px) translateY(80px);
+    }
+}

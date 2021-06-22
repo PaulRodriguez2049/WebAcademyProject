@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React , {useState , useEffect} from "react";
+import BlackScreen from "./components/navbar/BlackScreen";
+import NavBar from "./components/navbar/navbar";
+import Footer from './components/footer/footer';
+import BookOnline from './components/BookOnline/BookOnline';
+import Plans from "./components/Plans/Plans";
 
-function App() {
+const App=()=> {
+  const[menuOpen , setMenuOpen]=useState(false);
+  const[BlackScreenOpen , setBlackScreenOpen]=useState(false);
+  const[LogIn , setLogIn] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BlackScreen BlackScreenOpen={BlackScreenOpen} 
+                  setBlackScreenOpen={setBlackScreenOpen} 
+                  LogIn={LogIn}
+                  setLogIn={setLogIn}
+                  />
+      <NavBar menuOpen={menuOpen}
+              setMenuOpen={setMenuOpen}
+              BlackScreenOpen={BlackScreenOpen}
+              setBlackScreenOpen={setBlackScreenOpen}
+               />
+      {/* <BookOnline/> */}
+      <Plans  setBlackScreenOpen={setBlackScreenOpen}
+              setLogIn={setLogIn}
+              />
+      <Footer/>
     </div>
   );
 }

@@ -1,0 +1,235 @@
+.Checkout{
+    background: white;
+    width:980px;
+    padding:25px 40px 40px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 260px;
+}
+.Checkout_header{
+    color: rgb(153, 153, 153);
+    font-family: 'Open Sans ', sans-serif;
+    font-size: 32px;
+    font-weight: 200;
+    margin-bottom: 30px;
+    gap:20px;
+}
+.Checkout_container{
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid rgb(184, 184, 184);
+    padding-top: 40px;
+    gap:40px;
+    padding-bottom:40px ;
+}
+.CheckOut_SignUp{
+    display: flex;
+    flex-direction: column;
+}
+.CheckOut_SignUp_SignUp{
+    display: flex;
+    flex-direction: row;
+    gap:40px;
+}
+.CheckOut_SignUp_SignUp_number{
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    margin:10px 0;
+}
+.CheckOut_SignUp_text{
+    font-size: 16px;
+    font-family: 'Open Sans condensed', sans-serif;
+    font-weight: 200;
+    margin:10px 0 30px 0;
+    color:rgb(68, 68, 68);
+}
+.CheckOut_SignUp_buttons{
+    display: flex;
+    flex-direction: row;
+    gap:30px;
+    margin-bottom: 30px;
+}
+.CheckOut_SignUp_buttons_signUp,.CheckOut_SignUp_buttons_LogIn{
+    width:223px;
+    height:45px;
+    font-size: 16px;
+    font-family: 'Open Sans ', sans-serif;
+    outline: none;
+    cursor: pointer;
+    border:1px solid black;
+}
+.CheckOut_SignUp_buttons_signUp{
+    color: white;
+    background: black;
+}
+.CheckOut_SignUp_buttons_LogIn{
+    background: white;
+    color: black;
+}
+.CheckOut_SignUp_Payment{
+    border-top:1px solid rgb(184, 184, 184);
+    padding-top:30px;
+    display: flex;
+    flex-direction: row;
+    gap:40px;
+}
+.CheckOut_SignUp_Payment_number{
+    color:rgb(136, 136, 136);
+    font-size: 24px;
+    font-family: 'Open Sans ', sans-serif;
+    font-weight: 200;
+}
+.CheckOut_GrayBox{
+    background: #F4f4f4;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width:390px;
+}
+.CheckOut_GrayBox_header{
+    color:rgb(83, 83, 83);
+    font-size: 24px;
+    font-family: 'Open Sans ', sans-serif;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+.CheckOut_GrayBox_name{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:100%;
+    margin-top:20px;
+}
+.CheckOut_GrayBox_name_category,.CheckOut_GrayBox_price_category{
+    color:#242424;
+    font-size: 16px;
+    font-family: 'Open Sans ', sans-serif;
+    font-weight: 200;
+    
+}
+.CheckOut_GrayBox_price{
+    margin-top: 30px;
+    border-top:1px solid rgb(184, 184, 184);
+    width:100%;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom:20px  ;
+}
+.CheckOut_GrayBox_price_category{
+    width:50%;
+}
+.CheckOut_GrayBox_price_number{
+    font-size: 24px;
+    font-family: 'Open Sans ', sans-serif;
+    font-weight: 200;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1000px){
+    .Checkout{
+        width:550px;
+    }
+    .Checkout_container{
+        flex-direction: column-reverse;
+    } 
+    .CheckOut_GrayBox{
+        width:100%;
+    }
+}
+@media screen and (max-width:600px){
+    .Checkout{
+        width:100vw;
+        padding:25px 0 40px 0;
+        margin-bottom: 2px;
+    }
+    .Checkout_header{
+        width:100%;
+        padding:0 20px 20px 20px;
+        color: #313131;
+        font-size: 28px;
+        border-bottom: 1px solid rgb(231, 231, 231);
+        
+    }
+    .Checkout_container{
+        border-top: none;
+        padding: 0 25px;
+    }
+    .CheckOut_GrayBox{
+        background: #ffffff;
+        padding: 0px;
+        width:100%;
+    }
+    .CheckOut_SignUp_buttons{
+        flex-direction: column;
+        gap:20px;
+    }
+    .CheckOut_SignUp_buttons_signUp,.CheckOut_SignUp_buttons_LogIn{
+        width:100%;
+    }
+    .CheckOut_GrayBox_header{
+        display: none;
+    }
+    .CheckOut_GrayBox_display_none{
+        display: none;
+    }
+    .CheckOut_GrayBox_name_category{
+        color: #6b6b6b;
+    }
+    .CheckOut_GrayBox_memb_name{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .margin_top_none{
+        margin-top: 0;
+    }
+    .CheckOut_GrayBox_price{
+        margin-top: 0;
+        border-top:none;
+        border-bottom: 1px solid  rgb(202, 202, 202);
+    }
+    .CheckOut_GrayBox_price_number{
+        font-size: 18px;
+    }
+    .CheckOut_SignUp_text{
+        font-size: 18px;
+        font-family: 'Open Sans ', sans-serif;
+        font-weight: 400;
+        color:rgb(110, 110, 110);
+    }
+    .CheckOut_SignUp_SignUp{
+        display: flex;
+        flex-direction: row;
+        gap:25px;
+    }
+    .CheckOut_SignUp_SignUp_number{
+        font-size: 24px;
+        font-family: 'Open Sans ', sans-serif;
+        margin:0 0 20px 0;
+        font-weight: 100px;
+        color:rgb(48, 48, 48);
+    }
+    .CheckOut_SignUp_Payment{
+        
+        padding:40px 0 55px 0;
+        gap:25px;
+    }
+    .CheckOut_SignUp_Payment_number{
+        color:rgb(160, 160, 160);
+    }
+
+}
