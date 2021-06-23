@@ -1,5 +1,5 @@
 .BlackScreen{
-    position: absolute;
+    position: fixed;
     z-index: 4;
     background: #252128;
     max-width:100vw;

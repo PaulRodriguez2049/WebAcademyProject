@@ -1,5 +1,5 @@
 .PopUp_shade{
-    position: absolute;
+    position: fixed;
     background: rgba(117, 117, 117, 0.459);
     width:100vw;
     height:100vh;

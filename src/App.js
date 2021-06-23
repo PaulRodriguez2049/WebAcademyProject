@@ -6,6 +6,7 @@ import BookOnline from './components/BookOnline/BookOnline';
 import Plans from "./components/Plans/Plans";
 import { BrowserRouter as Router , Route , Switch ,Link } from "react-router-dom";
 
+
 const App=()=> {
   const[menuOpen , setMenuOpen]=useState(false);
   const[BlackScreenOpen , setBlackScreenOpen]=useState(false);
