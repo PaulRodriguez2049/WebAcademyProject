@@ -1,7 +1,7 @@
 import React , {useState , useEffect} from 'react';
 
 
-const Section5GalleryFull=({windowWidth,Photo})=>{
+const Section5GalleryFull=({windowWidth,Photo ,setSharePicture})=>{
 
     const [like , setLike] = useState(0);
 
@@ -41,7 +41,9 @@ const Section5GalleryFull=({windowWidth,Photo})=>{
                                         ><i className="fas fa-heart"></i></button>
                                     <h1 className="Home_section5_Gallery_elements_shades_likes_number">{Photo.likes+like>0 ? Photo.likes+like : ''}</h1>
                                 </div>
-                                <button className="Home_section5_Gallery_elements_shades_bottom_arrow"><i className="fas fa-reply"></i></button>
+                                <button className="Home_section5_Gallery_elements_shades_bottom_arrow"
+                                        onClick={()=>{setSharePicture(true)}}
+                                        ><i className="fas fa-reply"></i></button>
                             </div>
                         </div>
                         <img src={Photo.image} alt="" className="Home_section5_Gallery_elements_photos" />

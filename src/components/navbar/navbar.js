@@ -1,6 +1,5 @@
 import React , {useState , useEffect} from "react";
 import { Link } from 'react-router-dom';
-import Footer from "../footer/footer";
 import './styles/navbar.css'
 
 const NavBar=({menuOpen , setMenuOpen ,BlackScreenOpen , setBlackScreenOpen})=> {   
@@ -10,26 +9,33 @@ const NavBar=({menuOpen , setMenuOpen ,BlackScreenOpen , setBlackScreenOpen})=> 
   const HomeScroll=()=>{
     setMenuOpen(false) ;window.scrollTo({top: 0,behavior: 'smooth'})
   }
-  // const TrainingScroll=()=>{
-  //   const Training = document.querySelector('.Home_section2').getBoundingClientRect();
-  //   setMenuOpen(false) ; window.scrollBy({top:Training.top ,behavior: 'smooth'});
-  // }
-  // const AboutScroll=()=>{
-  //   const About = document.querySelector('.Home_section3').getBoundingClientRect();
-  //   setMenuOpen(false) ; window.scrollBy({top:About.top ,behavior: 'smooth'});
-  // }
-  // const WinningScroll=()=>{
-  //   const Winning = document.querySelector('.Home_section4').getBoundingClientRect();
-  //   setMenuOpen(false) ; window.scrollBy({top:Winning.top ,behavior: 'smooth'});
-  // }
+  const TrainingScroll=()=>{
+    const Training = document.querySelector('.Home_section2').getBoundingClientRect();
+    setMenuOpen(false) ; window.scrollBy({top:Training.top ,behavior: 'smooth'});
+  }
+  const AboutScroll=()=>{
+    const About = document.querySelector('.Home_section3').getBoundingClientRect();
+    setMenuOpen(false) ; window.scrollBy({top:About.top ,behavior: 'smooth'});
+  }
+  const WinningScroll=()=>{
+    const Winning = document.querySelector('.Home_section4').getBoundingClientRect();
+    setMenuOpen(false) ; window.scrollBy({top:Winning.top ,behavior: 'smooth'});
+  }
   const BookOnlineScroll=()=>{
+  
+    setMenuOpen(false) ;window.scrollTo({top: 0,behavior: 'smooth'});
+    
+  }
+  const Plans=()=>{
+    
     setMenuOpen(false) ;window.scrollTo({top: 0,behavior: 'smooth'});
     
   }
 
+
   const ContuctScroll=()=>{
-    // const footer = document.querySelector('.Footer').getBoundingClientRect();
-    setMenuOpen(false) ; window.scrollBy({top:0 ,behavior: 'smooth'});
+    const footer = document.querySelector('.Footer').getBoundingClientRect();
+    setMenuOpen(false) ; window.scrollBy({top:footer.top ,behavior: 'smooth'});
 
   }
 
@@ -49,17 +55,17 @@ const NavBar=({menuOpen , setMenuOpen ,BlackScreenOpen , setBlackScreenOpen})=> 
                 <h1 className="NavBar_menu_text">HOME</h1>
             </Link>
             <Link to='/' className='NavBar_menu_text'
-                  // onClick={TrainingScroll}
+                  onClick={TrainingScroll}
                   >
                 <h1 className="NavBar_menu_text">TRAINING</h1>
             </Link>
             <Link to='/' className='NavBar_menu_text'
-                // onClick={AboutScroll}
+                onClick={AboutScroll}
                 >
                 <h1 className="NavBar_menu_text">ABOUT</h1>
             </Link>
             <Link to='/' className='NavBar_menu_text'
-                // onClick={WinningScroll}
+                onClick={WinningScroll}
                 >
                 <h1 className="NavBar_menu_text">WINNINGS</h1>
             </Link>
@@ -70,7 +76,7 @@ const NavBar=({menuOpen , setMenuOpen ,BlackScreenOpen , setBlackScreenOpen})=> 
                 <h1 className="NavBar_menu_text">BOOK ONLINE</h1>
             </Link>
             <Link to='/plans-pricing' className="NavBar_menu_text"
-                    onClick={()=>{setMenuOpen(false) ;window.scrollTo({top: 0,behavior: 'smooth'});}}
+                    onClick={Plans}
                     >
                 <h1 className="NavBar_menu_text">PLANS</h1>
             </Link>

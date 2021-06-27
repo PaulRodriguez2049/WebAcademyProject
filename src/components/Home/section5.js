@@ -2,7 +2,7 @@ import React , {useState , useEffect} from 'react';
 import Section5GalleryFull from './section5GalleryFull';
 import { Link } from 'react-router-dom';
 
-const Section5=()=>{
+const Section5=({setSharePicture})=>{
     
     const[windowWidth , setWindowWidth]= useState(window.screen.availWidth);
     window.addEventListener('resize' , (()=>{setWindowWidth(window.screen.availWidth)}))
@@ -65,6 +65,7 @@ const Section5=()=>{
                 {Gallery.map(Photo=>(
                     <Section5GalleryFull windowWidth={windowWidth}
                                             Photo={Photo}
+                                            setSharePicture={setSharePicture}
                                             />
                 ))}
                 

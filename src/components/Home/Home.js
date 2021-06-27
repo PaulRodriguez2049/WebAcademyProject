@@ -8,7 +8,8 @@ import Section2 from './section2';
 import Section3 from './section3';
 import Section4 from './section4';
 import Section5 from './section5';
-import { Link } from 'react-router-dom';
+import HomeModalWindow from './HomeModalWindow'
+
 
 const Home =()=>{
     const [firstSectionParralax , setfirstSectionParralax] = useState(window.pageYOffset)
@@ -17,6 +18,7 @@ const Home =()=>{
     const [section1Image, setSection1Image] = useState('')
     const [section3Image , setSection3Image]= useState('')
     const [section4Image , setSection4Image]= useState('')
+    const[SharePicture , setSharePicture] = useState(false);
 
     const section1Parralax=()=>{
         const section2 = document.querySelector('.Home_section2').getBoundingClientRect().top;
@@ -90,7 +92,8 @@ const Home =()=>{
                     />
            <Section4 section4Image={section4Image}
                     />
-            <Section5/>
+            <Section5 setSharePicture={setSharePicture}/>
+            {SharePicture ? (<HomeModalWindow  setSharePicture={setSharePicture}/>) : ''}
         </div>
     );
 }
