@@ -5,6 +5,7 @@ import Footer from './components/footer/footer';
 import BookOnline from './components/BookOnline/BookOnline';
 import Plans from "./components/Plans/Plans";
 import { BrowserRouter as Router , Route , Switch ,Link } from "react-router-dom";
+import Home from "./components/Home/Home";
 
 
 const App=()=> {
@@ -26,6 +27,7 @@ const App=()=> {
                 setBlackScreenOpen={setBlackScreenOpen}
                 />
         <Switch>
+          <Route path='/' exact component={Home} />
           <Route path='/book_online' component={BookOnline}/>
           <Route path='/plans-pricing' component={() => <Plans setBlackScreenOpen={setBlackScreenOpen} setLogIn={setLogIn}/>}/>
         </Switch>

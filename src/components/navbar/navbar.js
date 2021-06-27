@@ -5,10 +5,31 @@ import './styles/navbar.css'
 
 const NavBar=({menuOpen , setMenuOpen ,BlackScreenOpen , setBlackScreenOpen})=> {   
 
+
+
+  const HomeScroll=()=>{
+    setMenuOpen(false) ;window.scrollTo({top: 0,behavior: 'smooth'})
+  }
+  // const TrainingScroll=()=>{
+  //   const Training = document.querySelector('.Home_section2').getBoundingClientRect();
+  //   setMenuOpen(false) ; window.scrollBy({top:Training.top ,behavior: 'smooth'});
+  // }
+  // const AboutScroll=()=>{
+  //   const About = document.querySelector('.Home_section3').getBoundingClientRect();
+  //   setMenuOpen(false) ; window.scrollBy({top:About.top ,behavior: 'smooth'});
+  // }
+  // const WinningScroll=()=>{
+  //   const Winning = document.querySelector('.Home_section4').getBoundingClientRect();
+  //   setMenuOpen(false) ; window.scrollBy({top:Winning.top ,behavior: 'smooth'});
+  // }
+  const BookOnlineScroll=()=>{
+    setMenuOpen(false) ;window.scrollTo({top: 0,behavior: 'smooth'});
+    
+  }
+
   const ContuctScroll=()=>{
-    const footer = document.querySelector('.Footer').getBoundingClientRect();
-    console.log(footer);
-    setMenuOpen(false) ; window.scrollTo({top:footer.top ,behavior: 'smooth'});
+    // const footer = document.querySelector('.Footer').getBoundingClientRect();
+    setMenuOpen(false) ; window.scrollBy({top:0 ,behavior: 'smooth'});
 
   }
 
@@ -22,13 +43,29 @@ const NavBar=({menuOpen , setMenuOpen ,BlackScreenOpen , setBlackScreenOpen})=> 
         </div>
       <div className= {`NavBar_menu ${menuOpen ? 'NavBar_menu_active' : ''}`}>
           <div className="NavBar_menu_options">
-            <h1 className="NavBar_menu_text">HOME</h1>
-            <h1 className="NavBar_menu_text">TRAINING</h1>
-            <h1 className="NavBar_menu_text">ABOUT</h1>
-            <h1 className="NavBar_menu_text">WINNINGS</h1>
+            <Link to='/' className='NavBar_menu_text'
+                  onClick={HomeScroll}
+                  >
+                <h1 className="NavBar_menu_text">HOME</h1>
+            </Link>
+            <Link to='/' className='NavBar_menu_text'
+                  // onClick={TrainingScroll}
+                  >
+                <h1 className="NavBar_menu_text">TRAINING</h1>
+            </Link>
+            <Link to='/' className='NavBar_menu_text'
+                // onClick={AboutScroll}
+                >
+                <h1 className="NavBar_menu_text">ABOUT</h1>
+            </Link>
+            <Link to='/' className='NavBar_menu_text'
+                // onClick={WinningScroll}
+                >
+                <h1 className="NavBar_menu_text">WINNINGS</h1>
+            </Link>
             <h1 className="NavBar_menu_text">THE STUDIO</h1>
             <Link to='/book_online' className="NavBar_menu_text"
-                  onClick={()=>{setMenuOpen(false) ;window.scrollTo({top: 0,behavior: 'smooth'});}}
+                  onClick={BookOnlineScroll}
                   >
                 <h1 className="NavBar_menu_text">BOOK ONLINE</h1>
             </Link>
