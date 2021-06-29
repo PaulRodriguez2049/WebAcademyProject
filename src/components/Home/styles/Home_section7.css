@@ -1,0 +1,163 @@
+.Home_section7{
+    background: #2F2B32;
+    margin-top: -5px;
+}
+.Home_section7_columns{
+    display: flex;
+    flex-direction: row;
+    width:100vw;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap:50px
+}
+.Home_section7_columns_img{
+    height:370px;
+}
+.Home_section7_columns_text_explanation{
+    width:400px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+}
+.Home_section7_columns_text_explanation_header,.Home_section7_columns_text_explanation_paraghraph{
+    width:100%;
+    text-align: center;
+    color:white;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    
+}
+.Home_section7_columns_text_explanation_header{
+    letter-spacing: 2px;
+}
+.Home_section7_columns_text_explanation_paraghraph{
+    font-size: 18px;
+    color: rgb(197, 197, 197);
+    font-weight: 300;
+    margin-top: 15px;
+}
+.Home_section7_columns_text_bottom{
+    display:flex;
+    justify-content: center;
+    gap:12px
+}
+.Home_section7_columns_text_bottom_btn{
+    width:140px;
+    height:42px;
+    border:1px solid rgb(131, 130, 130);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background: black;
+    cursor: pointer;
+}
+.Home_section7_columns_text_bottom_btn_Google{
+    width:32px;
+    display: flex;
+}
+.Home_section7_columns_text_bottom_btn_apple{
+    font-size: 32px;
+    width:40px;
+    height:36px;
+    color:white
+}
+.Home_section7_columns_text_bottom_btn_column{
+    display: flex;
+    flex-direction: column;
+
+}
+.Home_section7_columns_text_bottom_btn_column_header,.Home_section7_columns_text_bottom_btn_column_headerApple{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 12px;
+    color: rgb(179, 179, 179);
+    font-weight:100 ;
+}
+.Home_section7_columns_text_bottom_btn_column_headerApple{
+    font-size: 10px;
+}
+.Home_section7_columns_text_bottom_btn_column_title,.Home_section7_columns_text_bottom_btn_column_titleApple{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+    color: rgb(255, 254, 254);
+    font-weight:200 ;
+}
+.Home_section7_columns_text_bottom_btn_column_titleApple{
+    font-size: 18px;
+}
+.Home_section7_columns_text_explanation_phone{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    gap:10px;
+    margin:40px 0;
+}
+.Home_section7_columns_text_explanation_phone_prefix,.Home_section7_columns_text_explanation_phone_number{
+
+    background: var(--gray);
+    border:2px solid white;
+    outline:none;
+    padding: 7px 10px;
+    color:white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 16px;
+
+}
+.Home_section7_columns_text_explanation_phone_prefix::placeholder,.Home_section7_columns_text_explanation_phone_number::placeholder{
+    color:rgb(190, 190, 190);
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 16px;
+}
+.Home_section7_columns_text_explanation_phone_prefix{
+    width:50px;
+}
+.Home_section7_columns_text_explanation_phone_prefix:focus,.Home_section7_columns_text_explanation_phone_number:focus{
+    outline: 2px solid rgb(29, 186, 248);
+}
+.Home_section7_columns_text_explanation_phone_send{
+    border:1px solid var(--orange);
+    color:var(--gray);
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    background: var(--orange);
+    width:130px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.Home_section7_columns_text_explanation_phone_send:hover{
+    background: var(--dirty_orange);
+    border:1px solid var(--dirty_orange);
+}
+@media screen and (max-width:700px){
+    .Home_section7_columns_img{
+        display: none;
+    }
+}
+@media screen and (max-width:500px){
+    .Home_section7_columns{
+        padding: 90px 0px 90px 30px;
+    }
+    .Home_section7_columns_text_explanation{
+        width:100%;
+        padding: 0;
+       
+    }
+    .Home_section7_columns_text_bottom{
+        margin-top: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:12px
+    }
+    .Home_section7_columns_text_explanation_paraghraph{
+        width:90%;
+    }
+    .Home_section7_columns_text_explanation_phone{
+       display: none;
+    }
+}

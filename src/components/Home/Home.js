@@ -3,11 +3,15 @@ import './styles/Home_section1&2.css';
 import './styles/Home_section3.css';
 import './styles/Home_section4.css';
 import './styles/Home_section5.css';
+import './styles/Home_section6.css'
+import './styles/Home_section7.css'
 import Section1 from './section1';
 import Section2 from './section2';
 import Section3 from './section3';
 import Section4 from './section4';
-import Section5 from './section5';
+import Section5 from './section5/section5';
+import Section6 from './section6';
+import Section7 from './section7';
 import HomeModalWindow from './HomeModalWindow'
 
 
@@ -18,6 +22,7 @@ const Home =()=>{
     const [section1Image, setSection1Image] = useState('')
     const [section3Image , setSection3Image]= useState('')
     const [section4Image , setSection4Image]= useState('')
+    const [section6Image , setSection6Image]= useState('')
     const[SharePicture , setSharePicture] = useState(false);
 
     const section1Parralax=()=>{
@@ -76,6 +81,14 @@ const Home =()=>{
             setSection1Image('https://static.wixstatic.com/media/ff6bf6_1e7fa400b61f4eb0b3f5cb5bca3fb2bc.jpg/v1/fill/w_1499,h_1080,al_c,q_85/ff6bf6_1e7fa400b61f4eb0b3f5cb5bca3fb2bc.webp');
             setResize(false);
        }
+
+       if(window.screen.availWidth>=1200){
+        setSection6Image('https://static.wixstatic.com/media/ff6bf6_c2d84b9ac6114ab7a852ba02cb5f7910.jpg/v1/fill/w_1485,h_783,al_c,q_85/ff6bf6_c2d84b9ac6114ab7a852ba02cb5f7910.webp')
+       }else if(window.screen.availWidth<1200 && window.screen.availWidth>=650){
+        setSection6Image('https://static.wixstatic.com/media/ff6bf6_c2d84b9ac6114ab7a852ba02cb5f7910.jpg/v1/fill/w_879,h_783,al_c,q_85/ff6bf6_c2d84b9ac6114ab7a852ba02cb5f7910.webp')
+       }else{
+        setSection6Image('https://static.wixstatic.com/media/ff6bf6_c2d84b9ac6114ab7a852ba02cb5f7910.jpg/v1/fill/w_425,h_783,al_c,q_80/ff6bf6_c2d84b9ac6114ab7a852ba02cb5f7910.jpg')
+       }
        
    }
    
@@ -94,6 +107,8 @@ const Home =()=>{
                     />
             <Section5 setSharePicture={setSharePicture}/>
             {SharePicture ? (<HomeModalWindow  setSharePicture={setSharePicture}/>) : ''}
+            <Section6 section6Image={section6Image}/>
+            <Section7/>
         </div>
     );
 }
