@@ -1,12 +1,12 @@
 import React , {useState , useEffect} from 'react';
 
 
-const Section6=({section6Image})=>{
+const Section6=({section6Image,sixSectionParralax,hugeHight})=>{
 
     return(
         <div className="Home_section6">
-              <img src={section6Image} alt="" className="Home_section6_img" /> 
-              <div className="Home_section6_front">
+              <img src={section6Image} alt="" className={`Home_section6_img ${hugeHight ? 'hugeHight' : ''}`} style={{transform:` translateY(${sixSectionParralax*0.4}px)`}}/> 
+              <div className="Home_section6_front" >
                     <div className="Home_section6_front_studio">
                         <h1 className="Home_section6_front_header">THE STUDIO</h1>
                         <p className="Home_section6_front_paraghraph">

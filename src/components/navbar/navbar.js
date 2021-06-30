@@ -21,6 +21,10 @@ const NavBar=({menuOpen , setMenuOpen ,BlackScreenOpen , setBlackScreenOpen})=> 
     const Winning = document.querySelector('.Home_section4').getBoundingClientRect();
     setMenuOpen(false) ; window.scrollBy({top:Winning.top ,behavior: 'smooth'});
   }
+  const StudioScroll=()=>{
+    const Studio = document.querySelector('.Home_section6').getBoundingClientRect();
+    setMenuOpen(false) ; window.scrollBy({top:Studio.top ,behavior: 'smooth'});
+  }
   const BookOnlineScroll=()=>{
   
     setMenuOpen(false) ;window.scrollTo({top: 0,behavior: 'smooth'});
@@ -43,7 +47,7 @@ const NavBar=({menuOpen , setMenuOpen ,BlackScreenOpen , setBlackScreenOpen})=> 
     <div className="NavBar">
         <div className={`shades ${menuOpen ? 'shades_active' : ``}`}></div>
         <div className="NavBar_Toggle">
-            <button className={`NavBar_Toggle_button ${menuOpen ? 'white' : ''}`}
+            <button className={`NavBar_Toggle_button ${menuOpen ? 'white NavBar_Toggle_button_fixed' : ''}`}
                     onClick={()=>{(menuOpen )? (setMenuOpen(false)) :(setMenuOpen(true))}}
                     >{menuOpen ? (<i className="fas fa-times"></i>) : (<i className="fas fa-bars"></i>)}</button>
         </div>
@@ -69,7 +73,11 @@ const NavBar=({menuOpen , setMenuOpen ,BlackScreenOpen , setBlackScreenOpen})=> 
                 >
                 <h1 className="NavBar_menu_text">WINNINGS</h1>
             </Link>
-            <h1 className="NavBar_menu_text">THE STUDIO</h1>
+            <Link to='/' className='NavBar_menu_text'
+              onClick={StudioScroll}
+              >
+              <h1 className="NavBar_menu_text">THE STUDIO</h1>
+            </Link>
             <Link to='/book_online' className="NavBar_menu_text"
                   onClick={BookOnlineScroll}
                   >

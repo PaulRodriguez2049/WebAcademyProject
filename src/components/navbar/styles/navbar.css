@@ -105,6 +105,9 @@
         position: sticky;
         z-index: 3;
     }
+    .NavBar_Toggle_button_fixed{
+        position: fixed;
+    }
     .white {
         color:white;
     }

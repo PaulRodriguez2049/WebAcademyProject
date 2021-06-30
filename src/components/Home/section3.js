@@ -4,7 +4,7 @@ const Section3=({section3Image ,fourthSectionParralax})=>{
 
     return(
         <div className="Home_section3">
-               <img src={section3Image} alt="" className="Home_section3_img" style={{transform:` translateY(${fourthSectionParralax*0.7}px)`}} />
+               <img src={section3Image} alt="" className="Home_section3_img" style={{transform:` translateY(${fourthSectionParralax*0.4}px)`}} />
                <div className="Home_section3_content">
                    <h1 className="Home_section3_content_header">MEET THE COACH</h1>
                    <p className="Home_section3_content_p1">

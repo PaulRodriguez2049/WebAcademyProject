@@ -18,12 +18,14 @@ import HomeModalWindow from './HomeModalWindow'
 const Home =()=>{
     const [firstSectionParralax , setfirstSectionParralax] = useState(window.pageYOffset)
     const [fourthSectionParralax , setfourthSectionParralax] = useState(window.pageYOffset)
+    const [sixSectionParralax , setSixSectionParralax] = useState(window.pageYOffset)
     const [resize , setResize] = useState(false)
     const [section1Image, setSection1Image] = useState('')
     const [section3Image , setSection3Image]= useState('')
     const [section4Image , setSection4Image]= useState('')
     const [section6Image , setSection6Image]= useState('')
     const[SharePicture , setSharePicture] = useState(false);
+    const[hugeHight , setHugeHight]=useState(false)
 
     const section1Parralax=()=>{
         const section2 = document.querySelector('.Home_section2').getBoundingClientRect().top;
@@ -41,10 +43,26 @@ const Home =()=>{
             }
         }
     }
+    const section6Parralax=()=>{
+        const section5Bottom = document.querySelector('.Home_section5').getBoundingClientRect().bottom;
+        const section7Top = document.querySelector('.Home_section7').getBoundingClientRect().top;
+        if(window.screen.width>900){
+            if(section5Bottom<=(85  ) || section7Top>=85 ){
+                setSixSectionParralax(-section5Bottom+85 );
+                console.log(window.screen.height )
+            }
+        }else if(window.screen.width<=900){
+            if(section5Bottom<=(window.screen.height  ) || section7Top>=0 ){
+                setSixSectionParralax(-section5Bottom );
+                console.log(window.screen.height )
+            }
+        }
+    }
 
     useEffect(()=>{
         window.addEventListener('scroll',section1Parralax );
         window.addEventListener('scroll',section3Parralax );
+        window.addEventListener('scroll',section6Parralax );
         window.addEventListener('resize' , resizeHandler);
         resizeHandler();
         
@@ -89,7 +107,15 @@ const Home =()=>{
        }else{
         setSection6Image('https://static.wixstatic.com/media/ff6bf6_c2d84b9ac6114ab7a852ba02cb5f7910.jpg/v1/fill/w_425,h_783,al_c,q_80/ff6bf6_c2d84b9ac6114ab7a852ba02cb5f7910.jpg')
        }
-       
+       if(window.screen.availWidth<1600 && window.screen.availWidth>700 && window.screen.availHeight>1000){
+        setHugeHight(true)
+        return;
+       }else if(window.screen.availHeight<900 && window.screen.availHeight/window.screen.availWidth>2){
+        setHugeHight(true)
+        return;
+       }
+       setHugeHight(false)
+       console.log(hugeHight)
    }
    
    
@@ -107,7 +133,9 @@ const Home =()=>{
                     />
             <Section5 setSharePicture={setSharePicture}/>
             {SharePicture ? (<HomeModalWindow  setSharePicture={setSharePicture}/>) : ''}
-            <Section6 section6Image={section6Image}/>
+            <Section6 section6Image={section6Image}
+                        sixSectionParralax={sixSectionParralax}
+                        hugeHight={hugeHight}/>
             <Section7/>
         </div>
     );

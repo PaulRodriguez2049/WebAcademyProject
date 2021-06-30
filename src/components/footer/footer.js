@@ -80,6 +80,9 @@ const Footer=()=>{
                     <h1 className="Footer_Form_main_below">©2023 BY JOEY DIXON. PROUDLY CREATED WITH WIX.COM</h1>
                </form>
            </div>
+           <button  className='Footer_up'
+                    onClick={()=>{window.scrollTo({top: 0,behavior: 'smooth'})}}
+            ><i className="fas fa-chevron-up"></i></button>
         </div>
     );
 }

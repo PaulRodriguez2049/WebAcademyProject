@@ -1,6 +1,7 @@
 .Home_section7{
     background: #2F2B32;
     margin-top: -5px;
+    z-index: 1;
 }
 .Home_section7_columns{
     display: flex;
@@ -8,7 +9,7 @@
     width:100vw;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    padding: 100px;
     gap:50px
 }
 .Home_section7_columns_img{

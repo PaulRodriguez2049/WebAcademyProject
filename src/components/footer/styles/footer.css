@@ -10,7 +10,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     padding-top: 50px;
-   
+    position: relative;
     
 }
 .Footer_contuctMe{
@@ -123,6 +123,25 @@
     font-weight: 100;
     margin-top: 65px;
 }
+
+
+
+
+
+.Footer_up{
+    position: absolute;
+    bottom:30px;
+    left:50%;
+    transform: translateX(-50%);
+    width:100px;
+    height: 100px;
+    font-size:35px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+}
 @media screen and (max-width:900px){
     .Footer{
         flex-direction: column;
@@ -131,7 +150,11 @@
     .Footer_contuctMe{
         width:var(--width-wide);
     }
-
+    .Footer_up{
+        bottom:430px;
+       transform: translateX(-50%);
+    
+    }
 }
 @media screen and (max-width:500px){
     .Footer_contuctMe{

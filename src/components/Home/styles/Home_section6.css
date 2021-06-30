@@ -1,9 +1,14 @@
 .Home_section6{
     width:100vw;
     position: relative;
+    overflow: hidden;
 }
 .Home_section6_img{
-    width:100vw;
+    width:100%;
+}
+.hugeHight{
+    width:unset;
+    height: 100vh;
 }
 .Home_section6_front{
     position:absolute;
@@ -16,6 +21,7 @@
     top:0;
     left:0;
     color:white;
+    
     
 }
 .Home_section6_front_studio,.Home_section6_front_Adress,.Home_section6_front_Hours{
