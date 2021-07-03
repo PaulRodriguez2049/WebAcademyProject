@@ -2,7 +2,7 @@ import React , {useState , useEffect} from "react";
 import { Link } from 'react-router-dom';
 import './styles/navbar.css'
 
-const NavBar=({menuOpen , setMenuOpen ,BlackScreenOpen , setBlackScreenOpen})=> {   
+const NavBar=({menuOpen , setMenuOpen ,BlackScreenOpen , setBlackScreenOpen,firstSectionParralax , setfirstSectionParralax,resize , setResize,section1Image, setSection1Image,section1Parralax,resizeHandler,section2 , setSection2})=> {   
 
 
 
@@ -13,20 +13,25 @@ const NavBar=({menuOpen , setMenuOpen ,BlackScreenOpen , setBlackScreenOpen})=> 
     const Training = document.querySelector('.Home_section2').getBoundingClientRect();
     setMenuOpen(false) ; window.scrollBy({top:Training.top ,behavior: 'smooth'});
   }
-  const AboutScroll=()=>{
-    const About = document.querySelector('.Home_section3').getBoundingClientRect();
-    setMenuOpen(false) ; window.scrollBy({top:About.top ,behavior: 'smooth'});
-  }
-  const WinningScroll=()=>{
-    const Winning = document.querySelector('.Home_section4').getBoundingClientRect();
-    setMenuOpen(false) ; window.scrollBy({top:Winning.top ,behavior: 'smooth'});
-  }
-  const StudioScroll=()=>{
-    const Studio = document.querySelector('.Home_section6').getBoundingClientRect();
-    setMenuOpen(false) ; window.scrollBy({top:Studio.top ,behavior: 'smooth'});
-  }
+  // const AboutScroll=()=>{
+  //   const About = document.querySelector('.Home_section3').getBoundingClientRect();
+  //   setMenuOpen(false) ; window.scrollBy({top:About.top ,behavior: 'smooth'});
+  // }
+  // const WinningScroll=()=>{
+  //   const Winning = document.querySelector('.Home_section4').getBoundingClientRect();
+  //   setMenuOpen(false) ; window.scrollBy({top:Winning.top ,behavior: 'smooth'});
+  // }
+  // const StudioScroll=()=>{
+  //   const Studio = document.querySelector('.Home_section6').getBoundingClientRect();
+  //   setMenuOpen(false) ; window.scrollBy({top:Studio.top ,behavior: 'smooth'});
+  // }
   const BookOnlineScroll=()=>{
-  
+    setSection2(NaN)
+    window.removeEventListener('scroll',section1Parralax );
+    
+      // window.addEventListener('scroll',section3Parralax );
+      // window.addEventListener('scroll',section6Parralax );
+      window.removeEventListener('resize' , resizeHandler);
     setMenuOpen(false) ;window.scrollTo({top: 0,behavior: 'smooth'});
     
   }
@@ -64,17 +69,17 @@ const NavBar=({menuOpen , setMenuOpen ,BlackScreenOpen , setBlackScreenOpen})=> 
                 <h1 className="NavBar_menu_text">TRAINING</h1>
             </Link>
             <Link to='/' className='NavBar_menu_text'
-                onClick={AboutScroll}
+                // onClick={AboutScroll}
                 >
                 <h1 className="NavBar_menu_text">ABOUT</h1>
             </Link>
             <Link to='/' className='NavBar_menu_text'
-                onClick={WinningScroll}
+                // onClick={WinningScroll}
                 >
                 <h1 className="NavBar_menu_text">WINNINGS</h1>
             </Link>
             <Link to='/' className='NavBar_menu_text'
-              onClick={StudioScroll}
+              // onClick={StudioScroll}
               >
               <h1 className="NavBar_menu_text">THE STUDIO</h1>
             </Link>
